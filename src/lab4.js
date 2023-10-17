@@ -7,11 +7,21 @@
  - Use readFile of fs module to read nameFile
  */
 
-const fs = require("fs");
+//  const process = require("node:process");
+const fs = require("node:fs");
 
-const filename = process.argv; // Todo;
-const text = process.argv; // Todo;
+const filename = process.argv[2]; // Todo;
+const text = process.argv[3]; // Todo;
+console.log(filename);
 
 // Todo writeFile
+fs.writeFile(filename, text, (err, res) => {
+  if (err) {
+    console.error(err);
+  } else console.log("** File saved **");
+});
 
 // Todo readFile
+fs.readFile(filename, "utf8", (err, res) => {
+  console.log(res);
+});

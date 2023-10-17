@@ -1,0 +1,16 @@
+{
+  "name": "intro-to-nodejs-charleliegros",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/bEEpDhxw)",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "nodemon src/main.js",
+    "lab4": "nodemon src/lab4.js ./src/utils/content.txt \"texte à écrire dans le fichier !\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
