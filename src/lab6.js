@@ -15,3 +15,21 @@
  */
 
 const http = require("http");
+
+const server = http.createServer((req, res) => {
+  //   console.log(req.method);
+  if (req.url === "/") {
+    res.end(
+      "<h1>Hello, this is http node module</h1><a href='/dashboard'>Dashbaoard -></a>"
+    );
+  } else if (req.url === "/dashboard") {
+    res.end(`
+          <h1>Dashboard</h1>
+          <main>Basic routing using node http server</main>
+          <a href="/">Home -></a>
+      `);
+  }
+});
+server.listen(3000, () => {
+  console.log("running: ");
+});
